@@ -33,7 +33,7 @@ class Proxy(object):
 
     script = open(script, "w+")
 
-    if VPS.SSL == True:
+    if VPS.SSL == True or VPS.SSL == 1:
       script.write(self.proxy_script_ssl(VPS))
     else:
       script.write(self.proxy_script(VPS))
@@ -61,6 +61,7 @@ class Proxy(object):
         include proxy.conf;
       {close}
     {close}
+
     server {open}
       listen 443;
       server_name {VPS.hostname};
@@ -86,8 +87,8 @@ class Proxy(object):
     script = textwrap.dedent(
     f"""
     #!/bin/bash
-    HOST='\$host'
-    URI='\$request_uri'
+    HOST='$host'
+    URI='$request_uri'
     cat << EOF > /etc/nginx/sites-enabled/{VPS.hostname}.conf
     server {open}
       listen 80;
@@ -115,6 +116,7 @@ class Proxy(object):
         include proxy.conf;
       {close}
     {close}
+    
     server {open}
       listen 80;
       server_name {VPS.hostname};

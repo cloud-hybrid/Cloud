@@ -1,3 +1,7 @@
+import os
+import tempfile
+FILE_EXTENSION_LENGTH = 0
+
 class FileVault(object):
   def __init__(self):
     pass
@@ -10,5 +14,5 @@ class FileVault(object):
 
     conversion.close()
 
-    os.rename(str(source), str(f"{source}"[:-3] + ".backup"))
+    os.rename(str(source), str(f"{source}"[:-FILE_EXTENSION_LENGTH] + ".backup"))
     os.rename(conversion.name, f"{target}")

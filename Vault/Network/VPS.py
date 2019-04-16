@@ -54,5 +54,5 @@ class VPS(object):
     hash_decoded = hash.hexdigest()[:-30]
 
     # name = ("vault-" + hash_decoded + ".vps.vaultcipher.com")
-    name = ("v-" + hash_decoded + ".vps.cloudhybrid.io")
+    name = ("virtual-" + hash_decoded + ".vps.vaultcipher.com")
     return name

@@ -8,10 +8,13 @@ Please visit [Vault Cipher LLC.](https://vaultcipher.com) and read the package's
 # Development
 
 ## Critical
+- [ ] Fix Initial Wordpress settings where themes can't be downloaded
+- [ ] Update php.ini wordpress vps settings to increased RAM limit
+- [ ] 
 - [ ] Permissions
   - Create permissions object that changes localhost permissions for tmp, tmp.mesi, etc
-- [ ] Fix Login Redirect
-- [ ] Style ftp-registration-pending.php 
+- [x] Fix Login Redirect
+- [x] Style ftp-registration-pending.php 
 - [ ] Add period to account confirmation email after the activation code
 - [ ] Provisioning
   - [ ] Gateway Server
