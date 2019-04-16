@@ -148,12 +148,6 @@ class GUI(Frame):
     self.password_entry.grid(row = 1, column = 1, columnspan = 1, padx = 5)
 
   def execute(self):
-    # connection = Connection("root", "Kn0wledge!", "192.168.1.75", "V_PAYLOAD")
-    # result = connection.queryAll()
-    # subnet = connection.incrementIP()
-    # VPS_IP = connection.network + str(subnet)
-    # input.v_IP = VPS_IP
-
     input.v_User = self.user_entry.get()
     input.v_Password = self.password_entry.get()
     input.v_IP = self.IP_entry.get()
@@ -165,10 +159,6 @@ class GUI(Frame):
     input.SSL = self.SSL.get()
 
     input.eMail[2] = self.email_entry.get()
-
-    # connection.addVPS("test2", "Knowledge", "Wordpress", VPS_IP, 512, 1, "N/A", 0, "jsanders4129@gmail.com")
-    # connection.addVPS(input.v_User, input.v_Password, input.v_Type, input.v_IP, input.v_RAM, input.v_CPU, input.Domain, input.SSL, input.eMail[2])
-
     main()
 
 if __name__ == "__main__":
@@ -194,7 +184,7 @@ if __name__ == "__main__":
   parser.add_argument("--g_User", type = str, default = "snow", required = False)
   parser.add_argument("--g_IP", type = str, default = "192.168.0.5", required = False)
 
-  parser.add_argument("--eMail", nargs = "+", type = str, default = ["development.cloudhybrid@gmail.com", "Kn0wledge!", "development.cloudhybrid@gmail.com"], required = False)
+  parser.add_argument("--eMail", nargs = "+", type = str, default = ["development.cloudhybrid@gmail.com", "!", "development.cloudhybrid@gmail.com"], required = False)
 
   parser.add_argument("--GUI", type = str, default = True, required = False)
 
